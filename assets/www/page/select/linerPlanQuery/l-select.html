@@ -1,0 +1,29 @@
+<section id="l-select" data-transition="slideUp">
+	<header class="app-subpage-header">
+		<nav class="left app-back">
+            <a href="#" class="button" data-icon="close" data-target="back"></a>
+        </nav>
+        <h1 class="title">请选择航线</h1>
+	</header>
+	<article class="active" data-scroll="true" id="l-select-scroll">
+		<div class="scroll-content l-s">
+			<ul class="list app-list app-select-list" id="l-select-list"></ul>
+		</div>
+	</article>
+</section>
+<script type="YBT-tmpl/text" id="l-select-templ">
+{{#each liner}}
+{{#if @first}}
+	<li class="active">
+		<a href="#linerPlanQuery" data-value="{{code this}}" data-target="section" data-selected="selected" data-icon="checkbox-checked">{{line this}}</a>
+	</li>
+{{else}}
+	<li>
+		<a href="#linerPlanQuery" data-value="{{code this}}" data-target="section" data-selected="selected" data-icon="checkbox-checked">{{line this}}</a>
+	</li>
+{{/if}}
+{{/each}}
+</script>
+
+
+

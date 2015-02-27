@@ -1,0 +1,61 @@
+<section id="trq-result">
+	<header class="app-subpage-header">
+		<nav class="left app-back">
+          <a href="#" class="button" data-icon="previous" data-target="back"></a>
+    	</nav>
+		<h1 class="title">拖车需求查询结果</h1>
+	</header>
+	<article class="active" data-scroll="true" id="trq-scroll">
+		<div class="scroll-content">
+			<div id="trq-content" class="inset-wrap">
+				
+			</div>
+		</div>
+	</article>
+</section>
+<script type="YBT-tmpl/text" id="trq-templ">
+{{#list list}}
+	<ul class="list inset app-list result-list ex-list">
+		<li class="grid field">
+			<div class="col-0 field-name">货名</div>
+			<div class="col-1 field-value">{{cargoName}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">起始地</div>
+			<div class="col-1 field-value">{{startPlace}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">目的地</div>
+			<div class="col-1 field-value">{{endPlace}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">20GP</div>
+			<div class="col-1 field-value">{{quantity20gp}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">40GP</div>
+			<div class="col-1 field-value">{{quantity40gp}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">40HC</div>
+			<div class="col-1 field-value">{{quantity40hc}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">45HC</div>
+			<div class="col-1 field-value">{{quantity45hc}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">22RF</div>
+			<div class="col-1 field-value">{{quantity22rf}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">拆装箱</div>
+			<div class="col-1 field-value">{{#if @loadingSymbol}}拆箱{{else}}装箱{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">备注</div>
+			<div class="col-1 field-value">{{remark}}</div>
+		</li>
+	</ul>
+{{/list}}
+</script>

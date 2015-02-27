@@ -1,0 +1,55 @@
+<section id="ship-GPS">
+	<header class="app-subpage-header">
+		<nav class="left app-back">
+            <a href="#" class="button" data-icon="previous" data-target="back"></a>
+        </nav>
+        <h1 class="title ship-title" id="ship-title">
+        	<p>支线船舶定位</p>
+			<p>共找到<b class="ship-no">0</b>条船舶</p>
+		</h1>
+        <!-- <nav class="right app-back">
+            <a href="#index" class="button" data-icon="home" data-target="section"></a>
+        </nav> -->
+	</header>
+	<footer class="app-footer ship-result-foot">
+		<a href="#ship-list-srcoll" data-target="article" data-selected="selected" class="active"><i class="i-list"></i><span>列表</span></a>
+		<a href="#ship-map-area" data-target="article" data-selected="selected"><i class="i-map"></i><span>地图</span></a>
+	</footer>
+	<article class="active" data-scroll="true" id="ship-list-srcoll">
+		<div class="scroll-content">
+			<div id="ship-content">
+				<ul class="list app-list result-list ship-list" id="ship-list"></ul>
+			</div>
+		</div>
+	</article>
+	<article id="ship-map-area">
+		<div id="ship-map" class="full-map"></div>
+		<div class="ship-bottom-info" id="ship-bottom-info">
+			
+		</div>
+	</article>
+</section>
+
+<script type="YBT-tmpl/text" id="ship-list-templ">
+{{#each this}}
+	<li>
+		<a href="#ship-detail?id={{@index}}" data-target="section" data-selected="selected" data-icon="next">
+			<p>{{vslname}}</p>
+			<p>{{vslename}}</p>
+		</a>
+	</li>
+{{/each}}
+</script>
+
+<script type="YBT-tmpl/text" id="ship-bottom-info-templ">
+<ul class="list app-list">
+	<li>
+		<a href="#ship-detail?id={{id}}" data-target="section" data-selected="selected" data-icon="next">
+			<p id="ship-name">{{name}}</p>
+			<p>
+				<span class="label">{{ename}}</span>
+			</p>
+		</a>
+	</li>
+</ul>
+</script>

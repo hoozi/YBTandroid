@@ -1,0 +1,149 @@
+<section id="branch">
+	<header class="app-subpage-header">
+		<nav class="left app-back">
+          <a href="#" class="button" data-icon="previous" data-target="back"></a>
+    	</nav>
+		<h1 class="title">支线船期</h1>
+	</header>
+	<article class="active" data-scroll="true" id="branch-scroll">
+		<div class="scroll-content inset-wrap" id="branch-content">
+			
+		</div>
+	</article>
+</section>
+<script type="YBT-tmpl/text" id="branch-templ">
+	<ul class="list inset app-list result-list branch-list">
+		<li class="app-list-title">基本信息</li>
+		<li class="grid field">
+			<div class="col-0 field-name">港口</div>
+			<div class="col-1 field-value">{{#if this.0.arrivalPort}}{{this.0.arrivalPort}}{{else}}---{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">码头</div>
+			<div class="col-1 field-value">{{#if this.0.workTerminal}}{{this.0.workTerminal}}{{else}}---{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">英文船名</div>
+			<div class="col-1 field-value">{{#if this.0.vesselEname}}{{this.0.vesselEname}}{{else}}---{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">中文船名</div>
+			<div class="col-1 field-value">{{#if this.0.vesselCname}}{{this.0.vesselCname}}{{else}}---{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">进口航次</div>
+			<div class="col-1 field-value">{{#if this.0.voyageIn}}{{this.0.voyageIn}}{{else}}---{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">出口航次</div>
+			<div class="col-1 field-value">{{#if this.0.voyageOut}}{{this.0.voyageOut}}{{else}}---{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">进出口</div>
+			<div class="col-1 field-value">{{#if this.0.tradeFlag}}{{this.0.tradeFlag}}{{else}}---{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">预计抵港时间</div>
+			<div class="col-1 field-value">{{#if this.0.dependPlanTime}}{{this.0.dependPlanTime}}{{else}}---{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">实际抵港时间</div>
+			<div class="col-1 field-value">{{#if this.0.dependActualTime}}{{this.0.dependActualTime}}{{else}}---{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">预计离港时间</div>
+			<div class="col-1 field-value">{{#if this.0.leavePlanTime}}{{this.0.leavePlanTime}}{{else}}---{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">实际离港时间</div>
+			<div class="col-1 field-value">{{#if this.0.leaveActualTime}}{{this.0.leaveActualTime}}{{else}}---{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">UN代码</div>
+			<div class="col-1 field-value">{{#if this.0.vesselUncode}}{{this.0.vesselUncode}}{{else}}---{{/if}}</div>
+		</li>
+	</ul>
+	
+	<ul class="list app-list result-list branch-list">
+		<li class="app-list-title">内支线靠港1</li>
+		<li class="grid field">
+			<div class="col-0 field-name">卸港1</div>
+			<div class="col-1 field-value">{{#if this.0.nzxDischargePort1}}{{this.0.nzxDischargePort1}}{{else}}---{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">装港1</div>
+			<div class="col-1 field-value">{{#if this.0.nzxLoadPort1}}{{this.0.nzxLoadPort1}}{{else}}---{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">预计抵港时间</div>
+			<div class="col-1 field-value">{{#if this.1.dependPlanTime}}{{this.1.dependPlanTime}}{{else}}---{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">实际抵港时间</div>
+			<div class="col-1 field-value">{{#if this.1.dependActualTime}}{{this.1.dependActualTime}}{{else}}---{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">预计离港时间</div>
+			<div class="col-1 field-value">{{#if this.1.leavePlanTime}}{{this.1.leavePlanTime}}{{else}}---{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">实际离港时间</div>
+			<div class="col-1 field-value">{{#if this.1.leaveActualTime}}{{this.1.leaveActualTime}}{{else}}---{{/if}}</div>
+		</li>
+	</ul>
+	<ul class="list app-list result-list branch-list">
+		<li class="app-list-title">内支线靠港2</li>
+		<li class="grid field">
+			<div class="col-0 field-name">卸港2</div>
+			<div class="col-1 field-value">{{#if this.0.nzxDischargePort2}}{{this.0.nzxDischargePort2}}{{else}}---{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">装港2</div>
+			<div class="col-1 field-value">{{#if this.0.nzxLoadPort2}}{{this.0.nzxLoadPort2}}{{else}}---{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">预计抵港时间</div>
+			<div class="col-1 field-value">{{#if this.2.dependPlanTime}}{{this.2.dependPlanTime}}{{else}}---{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">实际抵港时间</div>
+			<div class="col-1 field-value">{{#if this.2.dependActualTime}}{{this.2.dependActualTime}}{{else}}---{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">预计离港时间</div>
+			<div class="col-1 field-value">{{#if this.2.leavePlanTime}}{{this.2.leavePlanTime}}{{else}}---{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">实际离港时间</div>
+			<div class="col-1 field-value">{{#if this.2.leaveActualTime}}{{this.2.leaveActualTime}}{{else}}---{{/if}}</div>
+		</li>
+	</ul>
+	<ul class="list app-list result-list branch-list">
+		<li class="app-list-title">内支线靠港3</li>
+		<li class="grid field">
+			<div class="col-0 field-name">卸港3</div>
+			<div class="col-1 field-value">{{#if this.0.nzxDischargePort3}}{{this.0.nzxDischargePort3}}{{else}}---{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">装港3</div>
+			<div class="col-1 field-value">{{#if this.0.nzxLoadPort3}}{{this.0.nzxLoadPort3}}{{else}}---{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">预计抵港时间</div>
+			<div class="col-1 field-value">{{#if this.3.dependPlanTime}}{{this.3.dependPlanTime}}{{else}}---{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">实际抵港时间</div>
+			<div class="col-1 field-value">{{#if this.3.dependActualTime}}{{this.3.dependActualTime}}{{else}}---{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">预计离港时间</div>
+			<div class="col-1 field-value">{{#if this.3.leavePlanTime}}{{this.3.leavePlanTime}}{{else}}---{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">实际离港时间</div>
+			<div class="col-1 field-value">{{#if this.3.leaveActualTime}}{{this.3.leaveActualTime}}{{else}}---{{/if}}</div>
+		</li>
+	</ul>
+</script>
+

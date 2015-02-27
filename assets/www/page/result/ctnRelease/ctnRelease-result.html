@@ -1,0 +1,76 @@
+<section id="ctnRelease-result">
+	<header class="app-subpage-header">
+		<nav class="left app-back">
+          <a href="#" class="button" data-icon="previous" data-target="back"></a>
+    	</nav>
+		<h1 class="title">放箱查询结果</h1>
+	</header>
+	<article class="active" data-scroll="true" id="ctnRelease-scroll">
+		<div class="scroll-content">
+			<div id="ctnRelease-content" class="inset-wrap"></div>
+		</div>
+	</article>
+</section>
+<script type="YBT-tmpl/text" id="ctnRelease-templ">
+{{#list list}}
+	<ul class="list inset app-list result-list ctn-list">
+		<li class="grid field">
+			<div class="col-0 field-name">NO</div>
+			<div class="col-1 field-value">{{@index}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">提单号</div>
+			<div class="col-1 field-value">{{#if billNo}}{{billNo}}{{else}}-{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">订舱号</div>
+			<div class="col-1 field-value">{{#if bookingNo}}{{bookingNo}}{{else}}-{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">货代</div>
+			<div class="col-1 field-value">{{#if applyForwarder}}{{applyForwarder}}{{else}}-{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">船司代码</div>
+			<div class="col-1 field-value">{{#if shipperCode}}{{shipperCode}}{{else}}-{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">船代代码</div>
+			<div class="col-1 field-value">{{#if agentCode}}{{agentCode}}{{else}}-{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">船舶英文名</div>
+			<div class="col-1 field-value">{{#if vesselEname}}{{vesselEname}}{{else}}-{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">航次</div>
+			<div class="col-1 field-value">{{#if voyage}}{{voyage}}{{else}}-{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">接收时间</div>
+			<div class="col-1 field-value">{{#if publishDate}}{{publishDate}}{{else}}-{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">操作时间</div>
+			<div class="col-1 field-value">{{#if acceptTime}}{{acceptTime}}{{else}}-{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">打印时间</div>
+			<div class="col-1 field-value">{{#if realsePrintTime}}{{realsePrintTime}}{{else}}-{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">状态</div>
+			<div class="col-1 field-value">{{>status}}</div>
+		</li>
+		<li>
+			<a href="#ctn-detail?id={{@ctnindex}}" data-selected="selected" data-target="section" data-icon="next" class="app-goto-next">查看详情</a>
+		</li>
+		<li>
+			<a href="#ctn-info?ctnRealseId={{ctnRealseId}}" data-selected="selected" data-target="section" data-icon="next" class="app-goto-next">放箱情况</a>
+		</li>
+	</ul>
+{{/list}}	
+</script>
+
+
+

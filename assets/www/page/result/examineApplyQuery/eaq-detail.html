@@ -1,0 +1,128 @@
+<section id="eaq-detail">
+	<header class="app-subpage-header">
+		<nav class="left app-back">
+          <a href="#" class="button" data-icon="previous" data-target="back"></a>
+    	</nav>
+		<h1 class="title">查验详情</h1>
+	</header>
+	<article class="active" data-scroll="true" id="eaq-detail-scroll">
+		<div class="scroll-content">
+			<div id="eaq-detail-content" class="inset-wrap"></div>
+		</div>
+	</article>
+</section>
+<script type="YBT-tmpl/text" id="eaq-detail-templ">
+
+<ul class="list inset app-list result-list eaq-detail-list">
+		<li class="app-list-title">基本信息</li>
+		<li class="grid field">
+			<div class="col-0 field-name">船名</div>
+			<div class="col-1 field-value">{{vesselEname}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">UN</div>
+			<div class="col-1 field-value">{{vesselCode}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">航次</div>
+			<div class="col-1 field-value">{{voyage}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">箱号</div>
+			<div class="col-1 field-value">{{ctnNo}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">提单号</div>
+			<div class="col-1 field-value">{{>billNolist}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">进出口</div>
+			<div class="col-1 field-value">{{ieFlag}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">查验堆场(码头)</div>
+			<div class="col-1 field-value">{{examineYard}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">联系人</div>
+			<div class="col-1 field-value">{{contact}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">联系电话</div>
+			<div class="col-1 field-value">{{>contactPhonelist}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">原场地</div>
+			<div class="col-1 field-value">{{originallyPlace}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">目的场地</div>
+			<div class="col-1 field-value">{{aimPlace}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">是否986</div>
+			<div class="col-1 field-value">{{isH986check}}</div>
+		</li>
+	</ul>
+	<ul class="list inset app-list result-list eaq-detail-list">
+		<li class="app-list-title">货代、报关行预约信息</li>
+		<li class="grid field">
+			<div class="col-0 field-name">预约申请时间</div>
+			<div class="col-1 field-value">{{bookingApplyDate}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">预约申请原因</div>
+			<div class="col-1 field-value">{{bookingApplyReason}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">预约撤销时间</div>
+			<div class="col-1 field-value">{{bookingCancelDate}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">预约撤销原因</div>
+			<div class="col-1 field-value">{{bookingCancelReason}}</div>
+		</li>
+	</ul>
+	{{#if flag}}
+	<ul class="list inset app-list result-list eaq-detail-list">
+		<li class="app-list-title">反馈状态</li>
+		<li class="grid field">
+			<div class="col-0 field-name">{{>mFlagDesc}}标志</div>
+			<div class="col-1 field-value">{{>mstatus}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">{{>mFlagDesc}}时间</div>
+			<div class="col-1 field-value">{{feedbackMovectnDate}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">{{>mFlagDesc}}原因</div>
+			<div class="col-1 field-value">{{feedbackMovectnRemark}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">{{>cFlagDesc}}标志</div>
+			<div class="col-1 field-value">{{>cstatus}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">{{>cFlagDesc}}时间</div>
+			<div class="col-1 field-value">{{feedbackCancelDate}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">{{>cFlagDesc}}原因</div>
+			<div class="col-1 field-value">{{feedbackCancelRemark}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">归位标志</div>
+			<div class="col-1 field-value">{{>rstatus}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">归位时间</div>
+			<div class="col-1 field-value">{{feedbackReturnctnDate}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">归位原因</div>
+			<div class="col-1 field-value">{{feedbackReturnctnRemark}}</div>
+		</li>
+	</ul>
+	{{/if}}
+
+</script>

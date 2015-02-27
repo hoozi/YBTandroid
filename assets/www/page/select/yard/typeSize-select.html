@@ -1,0 +1,23 @@
+<section id="typeSize-select" data-transition="slideUp">
+	<header class="app-subpage-header">
+		<nav class="left app-back">
+            <a href="#" class="button" data-icon="close" data-target="back"></a>
+        </nav>
+        <h1 class="title">请选择箱型尺寸</h1>
+	</header>
+	<article class="active" data-scroll="true"  id="typeSize-select-scroll">
+		<ul class="list app-list app-select-list" id="typeSize-select-list">
+			<li class="active">
+				<a href="#yard" data-value="" data-selected="selected" data-target="section" data-icon="checkbox-checked">全部</a>
+			</li>
+		</ul>
+	</article>
+</section>
+<script type="YBT-tmpl/text" id="typeSize-select-templ">
+{{#each typeSize}}
+	<li>
+		<a href="#yard" data-value="{{this}}" data-target="section" data-selected="selected" data-icon="checkbox-checked">{{this}}</a>
+	</li>
+{{/each}}
+</script>
+

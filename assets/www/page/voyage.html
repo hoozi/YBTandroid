@@ -1,0 +1,45 @@
+<section id="voyage">
+	<header class="app-subpage-header">
+		<nav class="left app-back">
+            <a href="#" class="button" data-icon="previous" data-target="back"></a>
+        </nav>
+        <h1 class="title">船期查询</h1>
+	</header>
+	<article class="active" data-scroll="true">
+		<div class="scroll-content sub-scroll-content">
+			<div class="input-group app-input-group">
+				<div class="input-row">
+					<a href="#port-select" id="port" data-target="section" data-selected="selected" data-icon="next" class="next-ico app-goto-next">
+						<label>港口</label>
+						<span id="port-text" data-value="CNZPU">乍浦</span>
+					</a>
+				</div>
+				<div class="input-row">
+					<a href="#code-select" id="code" data-target="section" data-selected="selected" data-icon="next" class="next-ico app-goto-next">
+						<label>码头</label>
+						<span id="code-text" data-value="">全部</span>
+					</a>
+				</div>
+				<div class="input-row">
+					<!-- <label>英文船名</label> -->
+					<input type="text" id="vesselEname" placeholder="请输入英文船名">
+				</div>
+				<div class="input-row">
+					<!-- <label>中文船名</label> -->
+					<input type="text" id="vesselCname" placeholder="请输入中文船名">
+				</div>
+				<div class="input-row">
+					<!-- <label>进口航次</label> -->
+					<input type="text" id="voyageIn" placeholder="请输入进口航次">
+				</div>
+				<div class="input-row">
+					<!-- <label>出口航次</label> -->
+					<input type="text" id="voyageOut" placeholder="请输入出口航次">
+				</div>
+			</div>
+			<a href="#voyage-result" data-target="section" class="button block app-button" id="v-search">查询</a>
+		</div>
+	</article>
+</section>
+
+

@@ -1,0 +1,67 @@
+<section id="price-result">
+	<header class="app-subpage-header">
+		<nav class="left app-back">
+          <a href="#" class="button" data-icon="previous" data-target="back"></a>
+    	</nav>
+		<h1 class="title">运价查询结果</h1>
+	</header>
+	<article class="active" data-scroll="true" id="price-scroll">
+		<div class="scroll-content">
+			<div id="price-content" class="inset-wrap"></div>
+		</div>
+	</article>
+</section>
+<script type="YBT-tmpl/text" id="price-templ">
+{{#each list}}
+	<ul class="list inset app-list result-list price-list">
+		<li class="grid field">
+			<div class="col-0 field-name">起始港<br/>目的港</div>
+			<div class="col-1 field-value">{{this.id.shipmentPort}}<br/>{{this.id.dischargePort}}</div>
+		</li>
+		<li class="divider"><b>运价USD</b></li>
+		<li class="inset-wrap">
+			<ul class="list inset app-list result-list">
+				<li class="grid field">
+					<div class="col-0 field-name">20GP</div>
+					<div class="col-1 field-value">{{this.id.cost20gp}}</div>
+				</li>
+				<li class="grid field">
+					<div class="col-0 field-name">40GP</div>
+					<div class="col-1 field-value">{{this.id.cost40gp}}</div>
+				</li>
+				<li class="grid field">
+					<div class="col-0 field-name">40HC</div>
+					<div class="col-1 field-value">{{this.id.cost40hc}}</div>
+				</li>
+				<li class="grid field">
+					<div class="col-0 field-name">45HC</div>
+					<div class="col-1 field-value">{{this.id.cost45hc}}</div>
+				</li>
+			</ul>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">货代</div>
+			<div class="col-1 field-value">{{this.id.forwarder}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">船公司</div>
+			<div class="col-1 field-value">{{this.id.shipper}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">船程/中转港</div>
+			<div class="col-1 field-value">{{this.id.sailingDays}}/{{this.id.transPort}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">码头/截关日/开船日</div>
+			<div class="col-1 field-value">{{this.id.loadTerminal}}/{{this.id.sailingDate}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">有效期</div>
+			<div class="col-1 field-value">{{this.id.validDateStart}} 至 {{this.id.validDateEnd}}</div>
+		</li>
+		<li>
+			<a href="#price-detail?forwarder={{this.id.forwarder}}&shipmentPort={{this.id.shipmentPort}}&dischargePort={{this.id.dischargePort}}&shipper={{this.id.shipper}}&sailingDate={{this.id.sailingDate}}" data-selected="selected" data-target="section" data-icon="next" class="next-ico">详情</a>
+		</li>
+	</ul>
+{{/each}}
+</script>

@@ -1,0 +1,142 @@
+<section id="ctn-detail">
+	<header class="app-subpage-header">
+		<nav class="left app-back">
+          <a href="#" class="button" data-icon="previous" data-target="back"></a>
+    	</nav>
+		<h1 class="title">放箱详情</h1>
+	</header>
+	<article class="active" data-scroll="true" id="ctn-detail-scroll">
+		<div class="scroll-content">
+			<div id="ctn-detail-content" class="inset-wrap"></div>
+		</div>
+	</article>
+</section>
+<script type="YBT-tmpl/text" id="ctn-detail-templ">
+	<ul class="list inset app-list result-list ctn-detail-list">
+		<li class="grid field">
+			<div class="col-0 field-name">订舱方式</div>
+			<div class="col-1 field-value">{{>bookingType}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">船舶UN</div>
+			<div class="col-1 field-value">{{#if vesselUncode}}{{vesselUncode}}{{else}}-{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">MMSI号</div>
+			<div class="col-1 field-value">{{#if vesselMmsi}}{{vesselMmsi}}{{else}}-{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">计划抵港时间</div>
+			<div class="col-1 field-value">{{#if arrivalPlanTime}}{{arrivalPlanTime}}{{else}}-{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">计划离港时间</div>
+			<div class="col-1 field-value">{{#if leavePlanTime}}{{leavePlanTime}}{{else}}-{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">中转港代码</div>
+			<div class="col-1 field-value">{{#if transPortCode}}{{transPortCode}}{{else}}-{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">中转港</div>
+			<div class="col-1 field-value">{{#if transPort}}{{transPort}}{{else}}-{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">卸货港代码</div>
+			<div class="col-1 field-value">{{#if dischargePortCode}}{{dischargePortCode}}{{else}}-{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">卸货港</div>
+			<div class="col-1 field-value">{{#if dischargePort}}{{dischargePort}}{{else}}-{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">交货地代码</div>
+			<div class="col-1 field-value">{{#if deliveryPlaceCode}}{{deliveryPlaceCode}}{{else}}-{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">交货地</div>
+			<div class="col-1 field-value">{{#if deliveryPlace}}{{deliveryPlace}}{{else}}-{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">申请人</div>
+			<div class="col-1 field-value">{{#if applyUser}}{{applyUser}}{{else}}-{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">申请货代</div>
+			<div class="col-1 field-value">{{#if applyForwarder}}{{applyForwarder}}{{else}}-{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">通知人</div>
+			<div class="col-1 field-value">{{#if notifyContact}}{{notifyContact}}{{else}}-{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">通知人电话</div>
+			<div class="col-1 field-value">{{#if notifyPhone}}{{notifyPhone}}{{else}}-{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">通知人Email</div>
+			<div class="col-1 field-value">{{#if notifyEmail}}{{notifyEmail}}{{else}}-{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">受理人</div>
+			<div class="col-1 field-value">{{#if acceptUser}}{{acceptUser}}{{else}}-{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">受理船司（代）</div>
+			<div class="col-1 field-value">{{#if acceptShipper}}{{acceptShipper}}{{else}}-{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">船司（代）联系人</div>
+			<div class="col-1 field-value">{{#if shipperContact}}{{shipperContact}}{{else}}-{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">船司（代）电话</div>
+			<div class="col-1 field-value">{{#if shipperPhone}}{{shipperPhone}}{{else}}-{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">船司（代）Email</div>
+			<div class="col-1 field-value">{{#if shipperEmail}}{{shipperEmail}}{{else}}-{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">提示1</div>
+			<div class="col-1 field-value">{{#if tip1}}{{tip1}}{{else}}-{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">提示2</div>
+			<div class="col-1 field-value">{{#if tip2}}{{tip2}}{{else}}-{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">提示3</div>
+			<div class="col-1 field-value">{{#if tip3}}{{tip3}}{{else}}-{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">提示4</div>
+			<div class="col-1 field-value">{{#if tip4}}{{tip4}}{{else}}-{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">提示5</div>
+			<div class="col-1 field-value">{{#if tip5}}{{tip5}}{{else}}-{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">提示6</div>
+			<div class="col-1 field-value">{{#if tip6}}{{tip6}}{{else}}-{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">接收时间</div>
+			<div class="col-1 field-value">{{#if publishDate}}{{publishDate}}{{else}}-{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">放箱时间</div>
+			<div class="col-1 field-value">{{#if acceptTime}}{{acceptTime}}{{else}}-{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">打印时间</div>
+			<div class="col-1 field-value">{{#if realsePrintTime}}{{realsePrintTime}}{{else}}-{{/if}}</div>
+		</li>
+	</ul>
+</script>
+
+
+
+
+

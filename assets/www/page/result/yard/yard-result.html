@@ -1,0 +1,56 @@
+<section id="yard-result">
+	<header class="app-subpage-header">
+		<nav class="left app-back">
+          <a href="#" class="button" data-icon="previous" data-target="back"></a>
+    	</nav>
+		<h1 class="title yard-title" id="yard-title">
+			<p>箱源查询结果</p>
+			<p>共找到<b class="yard-no">0</b>个堆场</p>
+		</h1>
+	</header>
+	<footer class="app-footer yard-result-foot">
+		<a href="#yard-list-srcoll" data-target="article"  data-selected="selected" class="active"><i class="i-list"></i><span>列表</span></a>
+		<a href="#yard-map-area" data-target="article" data-selected="selected"><i class="i-map"></i><span>地图</span></a>
+	</footer>
+	<article class="active" data-scroll="true" id="yard-list-srcoll">
+		<div class="scroll-content">
+			<div id="yard-content">
+				<ul class="list app-list result-list yard-list" id="yard-list"></ul>
+			</div>
+		</div>
+	</article>
+	<article id="yard-map-area">
+		<div id="yard-map" class="full-map"></div>
+		<div class="yard-bottom-info" id="yard-bottom-info">
+			<ul class="list app-list">
+	<li>
+		<a href="#yard-detail?id={{id}}" data-target="section" data-selected="selected" data-icon="next" class="next-ico">
+			<p><span id="yard-name">宁波港国际集装箱代理有限公司襄阳分公司</span> (<span class="ctn-num" id="ctn-num">333</span>)</p>
+		</a>
+	</li>
+</ul>
+		</div>
+	</article>
+</section>
+<script type="YBT-tmpl/text" id="yard-list-templ">
+{{#each list}}
+	<li>
+		<a href="#yard-detail?id={{@index}}" data-target="section" data-selected="selected" data-icon="next">
+			<p>{{name}}</p>
+		</a>
+	</li>
+{{/each}}
+</script>
+
+<script type="YBT-tmpl/text" id="yard-bottom-info-templ">
+<ul class="list app-list">
+	<li>
+		<a href="#yard-detail?id={{id}}" data-target="section" data-selected="selected" data-icon="next">
+			<p id="yard-name">{{name}}({{num}})</p>
+			<p>
+				<span class="label" id="ctn-num">{{num}}</span>
+			</p>
+		</a>
+	</li>
+</ul>
+</script>

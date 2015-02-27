@@ -1,0 +1,52 @@
+<section id="ship-detail">
+	<header class="app-subpage-header">
+		<nav class="left app-back">
+            <a href="#" class="button" data-icon="previous" data-target="back"></a>
+        </nav>
+        <h1 class="title">船舶详情</h1>
+        <nav class="right app-back">
+            <a href="#index" class="button" data-icon="home" data-target="section"></a>
+        </nav>
+	</header>
+	<div class="second-nav-wrap ship-top">
+		<div class="second-nav nav-next">
+			<div id="ship-info">
+				<ul class="list app-list col-1 ship-detail-list">
+					<li>
+						<p><b id="ship-name-detail">获取中...</b></p>
+						<p><span id="ship-ename">获取中...</span></p>
+					</li>
+					<li>
+						<a href="###" data-target="section" data-selected="selected" data-icon="next" id="goto-shipmap"><div data-icon="location">在地图上显示</div></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<article class="active" id="ship-detail-scroll" data-scroll="true">	
+		<div class="scroll-content">
+			<div id="ship-detail-content"></div>
+		</div>	
+	</article>
+</section>
+
+<script type="YBT-tmpl/text" id="ship-templ">
+<ul class="list app-list result-list ship-parm-list">
+	<li class="grid field">
+		<div class="col-0 field-name">英文船名</div>
+		<div class="col-1 field-value">{{vslename}}</div>
+	</li>
+	<li class="grid field">
+		<div class="col-0 field-name">中文船名</div>
+		<div class="col-1 field-value">{{vslname}}</div>
+	</li>
+	<li class="grid field">
+		<div class="col-0 field-name">船舶呼号</div>
+		<div class="col-1 field-value">{{vslcallsign}}</div>
+	</li>
+	<li class="grid field">
+		<div class="col-0 field-name">UN代码</div>
+		<div class="col-1 field-value">{{vslnamecd}}</div>
+	</li>
+</ul>
+</script>
