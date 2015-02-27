@@ -1,0 +1,18 @@
+<section id="GPS-result">
+	<header class="app-subpage-header">
+		<nav class="left app-back">
+          <a href="#" class="button" data-icon="previous" data-target="back"></a>
+    	</nav>
+		<h1 class="title">集卡跟踪查询结果</h1>
+	</header>
+	<article class="active">
+		<div id="gps-map" class="full-map"></div>
+		<div id="truck-info" class="truck-info bottom-info"></div>
+	</article>
+</section>
+<script type="YBT-tmpl/text" id="gps-tmepl">
+{{#truckInfo}}
+<p><b>车牌号</b><span>{{truckLicense}}</span></p>
+<p><b>车速</b><span>{{speed}}</span></p>
+{{/truckInfo}}
+</script>

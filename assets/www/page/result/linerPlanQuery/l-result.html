@@ -1,0 +1,58 @@
+<section id="l-result">
+	<header class="app-subpage-header">
+		<nav class="left app-back">
+          <a href="#" class="button" data-icon="previous" data-target="back"></a>
+    	</nav>
+		<h1 class="title">班轮查询结果</h1>
+	</header>
+	<article class="active" data-scroll="true" id="l-scroll">
+		<div class="scroll-content">
+			<div id="l-content" class="inset-wrap"></div>
+		</div>
+	</article>
+</section>
+<script type="YBT-tmpl/text" id="l-templ">
+{{#each this}}
+	<ul class="list inset app-list result-list">
+		<li class="grid field">
+			<div class="col-0 field-name">英文船名</div>
+			<div class="col-1 field-value">{{vesselNamee}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">中文船名</div>
+			<div class="col-1 field-value">{{vesselNamec}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">进出/航次</div>
+			<div class="col-1 field-value">{{#if importVoyage}}{{importVoyage}}{{else}}*{{/if}}/{{#if exportVoyage}}{{exportVoyage}}{{else}}*{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">经营人</div>
+			<div class="col-1 field-value">{{shipagentshipcompany}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">代理</div>
+			<div class="col-1 field-value">{{shipagent}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">作业码头</div>
+			<div class="col-1 field-value">{{operatorcompanyShortname}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">箱位</div>
+			<div class="col-1 field-value">{{exportCapability}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">装船期</div>
+			<div class="col-1 field-value">{{loadDate}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">开航期</div>
+			<div class="col-1 field-value">{{leaveDate}}</div>
+		</li>
+		<li>
+			<a href="#l-detail?ctnVesselSysid={{ctnVesselSysid}}" data-selected="selected" data-target="section" data-icon="next" class="next-ico app-goto-next l-link">挂靠港信息</a>
+		</li>
+	</ul>
+{{/each}}
+</script>

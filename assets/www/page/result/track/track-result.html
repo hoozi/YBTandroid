@@ -1,0 +1,222 @@
+<section id="track-result">
+	<header class="app-subpage-header">
+		<nav class="left app-back">
+          <a href="#" class="button" data-icon="previous" data-target="back"></a>
+    	</nav>
+		<h1 class="title" id="hasTitle">...</h1>
+	</header>
+	<ul class="control-group app-control-group result-switch nav-next">
+        <li class="active" data-value="ctn"><a href="#ctn" data-target="article">单箱信息</a></li>
+        <li data-value="bl"><a href="#node" data-target="article">物流节点</a></li>
+    </ul>
+	<article class="active track-active" data-scroll="true" id="ctn">
+		<div class="scroll-content">
+			<div id="ctn-content" class="inset-wrap">
+				
+			</div>
+		</div>
+	</article>
+	<article class="track-active" data-scroll="true" id="node">
+		<div class="scroll-content">
+			<div id="node-content" class="inset-wrap">
+				
+			</div>
+		</div>
+	</article>
+</section>
+<script type="YBT-tmpl/text" id="ctn-templ">
+<ul class="list inset app-list result-list track-list">
+	<li class="grid field">
+		<div class="col-0 field-name">箱号</div>
+		<div class="col-1 field-value">{{#if orderTranscationCtn.ctnNo}}{{orderTranscationCtn.ctnNo}}{{else}}-{{/if}}</div>
+	</li>
+	<li class="grid field">
+		<div class="col-0 field-name">提单号</div>
+		<div class="col-1 field-value">{{#if orderTranscationCtn.billNo}}{{orderTranscationCtn.billNo}}{{else}}-{{/if}}</div>
+	</li>
+	<li class="grid field">
+		<div class="col-0 field-name">英文船名航次</div>
+		<div class="col-1 field-value">{{#if vesselEname}}{{vesselEname}}{{else}}-{{/if}}/{{#if voyage}}{{voyage}}{{else}}-{{/if}}</div>
+	</li>
+	{{#orderTranscationCtn}}
+	<li class="grid field">
+		<div class="col-0 field-name">箱型尺寸</div>
+		<div class="col-1 field-value">{{#if ctnSizetype}}{{ctnSizetype}}{{else}}-{{/if}}</div>
+	</li>
+	<li class="grid field">
+		<div class="col-0 field-name">箱类别</div>
+		<div class="col-1 field-value">-</div>
+	</li>
+	<li class="grid field">
+		<div class="col-0 field-name">箱状态</div>
+		<div class="col-1 field-value">{{#if ctnStatus}}{{ctnStatus}}{{else}}-{{/if}}</div>
+	</li>
+	<li class="grid field">
+		<div class="col-0 field-name">箱主</div>
+		<div class="col-1 field-value">{{#if ctnOwner}}{{ctnOwner}}{{else}}-{{/if}}</div>
+	</li>
+	<li class="grid field">
+		<div class="col-0 field-name">铅封号</div>
+		<div class="col-1 field-value">{{#if ctnSealno}}{{ctnSealno}}{{else}}-{{/if}}</div>
+	</li>
+	<li class="grid field">
+		<div class="col-0 field-name">联合国编号</div>
+		<div class="col-1 field-value">-</div>
+	</li>
+	<li class="grid field">
+		<div class="col-0 field-name">装货港</div>
+		<div class="col-1 field-value">-</div>
+	</li>
+	<li class="grid field">
+		<div class="col-0 field-name">卸货港</div>
+		<div class="col-1 field-value">-</div>
+	</li>
+	<li class="grid field">
+		<div class="col-0 field-name">箱重</div>
+		<div class="col-1 field-value">{{#if ctnWeight}}{{ctnWeight}}{{else}}-{{/if}}</div>
+	</li>
+	<li class="grid field">
+		<div class="col-0 field-name">称重重量</div>
+		<div class="col-1 field-value">-</div>
+	</li>
+	<li class="grid field">
+		<div class="col-0 field-name">单证重量</div>
+		<div class="col-1 field-value">-</div>
+	</li>
+	<li class="grid field">
+		<div class="col-0 field-name">冷箱标记</div>
+		<div class="col-1 field-value">{{#if ctnFlagT}}{{ctnFlagT}}{{else}}-{{/if}}</div>
+	</li>
+	<li class="grid field">
+		<div class="col-0 field-name">危险品等级</div>
+		<div class="col-1 field-value">{{#if ctnFlagD}}{{ctnFlagD}}{{else}}-{{/if}}</div>
+	</li>
+	<li class="grid field">
+		<div class="col-0 field-name">超限箱标记</div>
+		<div class="col-1 field-value">{{#if ctnFlagL}}{{ctnFlagL}}{{else}}-{{/if}}</div>
+	</li>
+	{{/orderTranscationCtn}}
+</ul>
+</script>
+<script type="YBT-tmpl/text" id="bl-templ">
+<ul class="list inset app-list result-list track-list">
+	<li class="grid field">
+		<div class="col-0 field-name">提单号</div>
+		<div class="col-1 field-value">{{#if billNo}}{{billNo}}{{else}}-{{/if}}</div>
+	</li>
+	<li class="grid field">
+		<div class="col-0 field-name">英文船名航次</div>
+		<div class="col-1 field-value">{{#if vesselEname}}{{vesselEname}}{{else}}-{{/if}}/{{#if voyage}}{{voyage}}{{else}}-{{/if}}</div>
+	</li>
+	{{#orderTranscation}}
+	<li class="grid field">
+		<div class="col-0 field-name">发货人</div>
+		<div class="col-1 field-value">{{#if contact}}{{contact}}{{else}}-{{/if}}</div>
+	</li>
+	<li class="grid field">
+		<div class="col-0 field-name">收货人</div>
+		<div class="col-1 field-value">{{#if consignee}}{{consignee}}{{else}}-{{/if}}</div>
+	</li>
+	<li class="grid field">
+		<div class="col-0 field-name">起运港</div>
+		<div class="col-1 field-value">{{#if shipmentPort}}{{shipmentPort}}{{else}}-{{/if}}</div>
+	</li>
+	<li class="grid field">
+		<div class="col-0 field-name">目的港</div>
+		<div class="col-1 field-value">{{#if dischargePort}}{{dischargePort}}{{else}}-{{/if}}</div>
+	</li>
+	<li class="grid field">
+		<div class="col-0 field-name">20尺箱子</div>
+		<div class="col-1 field-value">{{#if ctn20Number}}{{ctn20Number}}{{else}}-{{/if}}</div>
+	</li>
+	<li class="grid field">
+		<div class="col-0 field-name">40尺箱子</div>
+		<div class="col-1 field-value">{{#if ctn40Number}}{{ctn40Number}}{{else}}-{{/if}}</div>
+	</li>
+	<li class="grid field">
+		<div class="col-0 field-name">件数</div>
+		<div class="col-1 field-value">{{#if unitnumber}}{{unitnumber}}{{else}}-{{/if}}</div>
+	</li>
+	<li class="grid field">
+		<div class="col-0 field-name">毛重</div>
+		<div class="col-1 field-value">{{#if weight}}{{weight}}{{else}}-{{/if}}</div>
+	</li>
+	<li class="grid field">
+		<div class="col-0 field-name">体积</div>
+		<div class="col-1 field-value">{{#if volume}}{{volume}}{{else}}-{{/if}}</div>
+	</li>
+	{{/orderTranscation}}
+</ul>
+</script>
+<script type="YBT-tmpl/text" id="node-ctn-templ">
+{{#list traceinfo}}	
+<div class="node">
+	<div class="node-tag">
+		<div class="name-tag">{{#if nodeDesc}}{{nodeDesc}}{{else}}-{{/if}}</div>
+		<div class="time-tag">{{#if nodeDate}}{{nodeDate}}{{else}}-{{/if}}</div>
+	</div>
+	<ul class="list inset app-list result-list track-list">
+		<li class="grid field">
+			<div class="col-0 field-name">状态</div>
+			<div class="col-1 field-value">{{#if nodeContent}}{{nodeContent}}{{else}}-{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">地点</div>
+			<div class="col-1 field-value">{{#if nodeLocation}}{{nodeLocation}}{{else}}-{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">备注</div>
+			<div class="col-1 field-value">{{#if nodeRemark}}{{nodeRemark}}{{else}}-{{/if}}</div>
+		</li>
+	</ul>
+</div>
+{{/list}}
+</script>
+<script type="YBT-tmpl/text" id="node-bl-templ">
+{{#list traceinfo}}
+{{#if @hasSon}}	
+<div class="node">
+	<div class="node-tag">
+		<div class="name-tag">{{#if nodeDesc}}{{nodeDesc}}{{else}}-{{/if}}</div>
+		<div class="time-tag">{{#if nodeDate}}{{nodeDate}}{{else}}-{{/if}}</div>
+	</div>
+	<ul class="list inset app-list result-list track-list">
+		<li class="grid field">
+			<div class="col-0 field-name">状态</div>
+			<div class="col-1 field-value">{{#if nodeContent}}{{nodeContent}}{{else}}-{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">地点</div>
+			<div class="col-1 field-value">{{#if nodeLocation}}{{nodeLocation}}{{else}}-{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">备注</div>
+			<div class="col-1 field-value">{{#if nodeRemark}}{{nodeRemark}}{{else}}-{{/if}}</div>
+		</li>
+	</ul>
+</div>
+{{else}}
+<div class="node">
+	<div class="node-tag">
+		<div class="name-tag">{{#if nodeDesc}}{{nodeDesc}}{{else}}-{{/if}}</div>
+		<div class="time-tag">{{#if nodeDate}}{{nodeDate}}{{else}}-{{/if}}</div>
+	</div>
+	<ul class="list inset app-list result-list track-list">
+		<li class="grid field">
+			<div class="col-0 field-name">船名 / 航次</div>
+			<div class="col-1 field-value">{{#if nodeRemark}}{{nodeRemark}}{{else}}-{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">地点</div>
+			<div class="col-1 field-value">{{#if nodeLocation}}{{nodeLocation}}{{else}}-{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">箱号 / 时间</div>
+			<div class="col-1 field-value">{{>multi}}</div>
+		</li>
+	</ul>
+</div>
+{{/if}}
+{{/list}}
+</script>
+

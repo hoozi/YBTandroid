@@ -1,0 +1,49 @@
+<section id="yard-detail">
+	<header class="app-subpage-header">
+		<nav class="left app-back">
+            <a href="#" class="button" data-icon="previous" data-target="back"></a>
+        </nav>
+        <h1 class="title">堆场详情</h1>
+        <!-- <nav class="right app-back">
+            <a href="#index" class="button" data-icon="home" data-target="section"></a>
+        </nav> -->
+	</header>
+	<div class="second-nav-wrap yard-top">
+		<div class="second-nav nav-next">
+			<div id="yard-info">
+				<ul class="list app-list col-1 yard-detail-list">
+					<li>
+						<p><b id="yard-name-detail">获取中...</b></p>
+						<p>共有<span id="ctn-num-detail">0</span>个箱源</p>
+					</li>
+					<li>
+						<a href="###" data-target="section" data-selected="selected" data-icon="next" id="goto-map" class="next-ico"><div class="map-ico" data-icon="location">在地图上显示</div></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<article class="active" id="yard-detail-scroll" data-scroll="true">	
+		<div class="scroll-content">
+			<div id="yard-detail-content"></div>
+		</div>	
+	</article>
+</section>
+
+<script type="YBT-tmpl/text" id="yard-ctn-templ">
+{{#each ctn}}
+<ul class="list app-list result-list yard-ctn-list">
+	<li class="divider"><b>箱主 : {{name}}</b></li>
+	<li class="inset-wrap">
+		<ul class="list inset app-list result-list">
+			{{#each ctnList}}
+			<li class="grid field">
+				<div class="col-0 field-name">{{typesize}}</div>
+				<div class="col-1 field-value">{{num}}</div>
+			</li>
+			{{/each}}
+		</ul>
+	</li>
+</ul>
+{{/each}}
+</script>

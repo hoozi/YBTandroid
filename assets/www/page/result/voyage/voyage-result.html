@@ -1,0 +1,75 @@
+<section id="voyage-result">
+	<header class="app-subpage-header">
+		<nav class="left app-back">
+          <a href="#" class="button" data-icon="previous" data-target="back"></a>
+    	</nav>
+		<h1 class="title">船期查询结果</h1>
+	</header>
+	<article class="active" data-scroll="true" id="voyage-scroll">
+		<div class="scroll-content">
+			<div id="voyage-content" class="inset-wrap"></div>
+		</div>
+	</article>
+</section>
+<script type="YBT-tmpl/text" id="voyage-templ">
+{{#list list}}
+	<ul class="list inset app-list result-list">
+		<li class="grid field">
+			<div class="col-0 field-name">NO.</div>
+			<div class="col-1 field-value">{{@index}}</div>
+			{{> today}}
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">停靠码头</div>
+			<div class="col-1 field-value">{{#if codeCvalue}}{{codeCvalue}}{{else}}-{{/if}}</div>
+		</li>
+		{{#voyageInfo}}
+		<li class="grid field">
+			<div class="col-0 field-name">英文船名</div>
+			<div class="col-1 field-value">{{#if vesselEname}}{{vesselEname}}{{else}}-{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">中文船名</div>
+			<div class="col-1 field-value">{{#if vesselCname}}{{vesselCname}}{{else}}-{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">进/出口航次</div>
+			<div class="col-1 field-value">{{#if voyageIn}}{{voyageIn}}{{else}}-{{/if}}/{{#if voyageOut}}{{voyageOut}}{{else}}-{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">内外贸</div>
+			<div class="col-1 field-value">{{#if tradeFlag}}{{tradeFlag}}{{else}}-{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">UN代码</div>
+			<div class="col-1 field-value">{{#if vesselUncode}}{{vesselUncode}}{{else}}-{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">海关截关时间</div>
+			<div class="col-1 field-value">{{#if cTNCloseTime}}{{cTNCloseTime}}{{else}}-{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">码头截单时间</div>
+			<div class="col-1 field-value">{{#if cTNStopTime}}{{cTNStopTime}}{{else}}-{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">进箱开始时间</div>
+			<div class="col-1 field-value">{{#if cTNBeginTime}}{{cTNBeginTime}}{{else}}-{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">进箱截止时间</div>
+			<div class="col-1 field-value">{{#if cTNEndTime}}{{cTNEndTime}}{{else}}-{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">预计抵港时间</div>
+			<div class="col-1 field-value">{{#if dependPlanTime}}{{dependPlanTime}}{{else}}-{{/if}}</div>
+		</li>
+		{{#if @hasArrivalPort}}
+		<li>
+			<a href="#branch?id={{id}}" data-selected="selected" data-target="section" data-icon="next" class="app-goto-next branch-link next-ico">支线船期</a>
+		</li>
+		{{/if}}
+		{{/voyageInfo}}
+	</ul>
+{{/list}}
+</script>

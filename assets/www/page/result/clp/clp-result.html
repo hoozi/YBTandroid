@@ -1,0 +1,103 @@
+<section id="clp-result">
+	<header class="app-subpage-header">
+		<nav class="left app-back">
+          <a href="#" class="button" data-icon="previous" data-target="back"></a>
+    	</nav>
+		<h1 class="title">CLP查询结果</h1>
+	</header>
+	<article class="active" data-scroll="true" id="clp-scroll">
+		<div class="scroll-content">
+			<div id="clp-content" class="inset-wrap">
+				
+			</div>
+		</div>
+	</article>
+</section>
+<script type="YBT-tmpl/text" id="clp-templ">
+<ul class="list inset app-list result-list clp-list">
+	<li class="grid field">
+		<div class="col-0 field-name">码头</div>
+		<div class="col-1 field-value">{{sender}}-->{{receiver}}</div>
+	</li>
+	<li class="grid field">
+		<div class="col-0 field-name">接收状态</div>
+		<div class="col-1 field-value">{{status}}</div>
+	</li>
+	<li class="grid field">
+		<div class="col-0 field-name">CLP录入时间</div>
+		<div class="col-1 field-value">{{clpTime}}</div>
+	</li>
+	<li class="grid field">
+		<div class="col-0 field-name">备注</div>
+		<div class="col-1 field-value">{{statusDesc}}</div>
+	</li>
+</ul>
+<ul class="list inset app-list result-list clp-list">
+{{#costcoMainDeo}}
+	<li class="grid field">
+		<div class="col-0 field-name">箱号</div>
+		<div class="col-1 field-value">{{ctnNo}}</div>
+	</li>
+	<li class="grid field">
+		<div class="col-0 field-name">船公司</div>
+		<div class="col-1 field-value">{{lineCode}}</div>
+	</li>
+	<li class="grid field">
+		<div class="col-0 field-name">英文船名/航次</div>
+		<div class="col-1 field-value">{{vessel}}/{{voyage}}</div>
+	</li>
+	<li class="grid field">
+		<div class="col-0 field-name">装货港</div>
+		<div class="col-1 field-value">{{loadPortCode}}</div>
+	</li>
+	<li class="grid field">
+		<div class="col-0 field-name">卸货港</div>
+		<div class="col-1 field-value">{{dischargePortCode}}</div>
+	</li>
+	<li class="grid field">
+		<div class="col-0 field-name">箱型尺寸</div>
+		<div class="col-1 field-value">{{sizetype}}</div>
+	</li>
+	<li class="grid field">
+		<div class="col-0 field-name">箱状态</div>
+		<div class="col-1 field-value">{{status}}</div>
+	</li>
+	<li class="grid field">
+		<div class="col-0 field-name">货总重</div>
+		<div class="col-1 field-value">{{>total}}</div>
+	</li>
+	<li class="grid field">
+		<div class="col-0 field-name">铅封号</div>
+		<div class="col-1 field-value">{{sealNo}}</div>
+	</li>
+	<li class="grid field">
+		<div class="col-0 field-name">中转港</div>
+		<div class="col-1 field-value">{{tranportCode}}</div>
+	</li>
+	<li class="grid field">
+		<div class="col-0 field-name">交货港</div>
+		<div class="col-1 field-value">{{deliveryCode}}</div>
+	</li>
+	<li class="grid field">
+		<div class="col-0 field-name">进出口标志</div>
+		<div class="col-1 field-value">{{ioFlag}}</div>
+	</li>
+	<li class="grid field">
+		<div class="col-0 field-name">内外贸标志</div>
+		<div class="col-1 field-value">{{tradeFlag}}</div>
+	</li>
+	<li class="grid field">
+		<div class="col-0 field-name">装箱日期</div>
+		<div class="col-1 field-value">{{stuffingTime}}</div>
+	</li>
+	<li class="grid field">
+		<div class="col-0 field-name">箱主</div>
+		<div class="col-1 field-value">{{operatorCode}}</div>
+	</li>
+	<li class="grid field">
+		<div class="col-0 field-name">货代</div>
+		<div class="col-1 field-value">{{forwarder}}</div>
+	</li>
+{{/costcoMainDeo}}
+</ul>
+</script>

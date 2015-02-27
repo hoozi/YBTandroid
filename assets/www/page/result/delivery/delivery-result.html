@@ -1,0 +1,107 @@
+<section id="delivery-result">
+	<header class="app-subpage-header">
+		<nav class="left app-back">
+          <a href="#" class="button" data-icon="previous" data-target="back"></a>
+    	</nav>
+		<h1 class="title">无纸放行查询结果</h1>
+	</header>
+	<article class="active" data-scroll="true" id="delivery-scroll">
+		<div class="scroll-content">
+			<div id="delivery-content" class="inset-wrap">
+				
+			</div>
+		</div>
+	</article>
+</section>
+<script type="YBT-tmpl/text" id="delivery-templ">
+{{#list list}}
+	<ul class="list inset app-list result-list delivery-list">
+		<li class="grid field">
+			<div class="col-0 field-name">船名</div>
+			<div class="col-1 field-value">{{#if envessel}}{{envessel}}{{else}}-{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">航次</div>
+			<div class="col-1 field-value">{{#if voyage}}{{voyage}}{{else}}-{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">码头</div>
+			<div class="col-1 field-value">{{#if matou}}{{matou}}{{else}}-{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">箱号</div>
+			<div class="col-1 field-value">{{#if containerno}}{{containerno}}{{else}}-{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">提单号</div>
+			<div class="col-1 field-value">{{#if billno}}{{billno}}{{else}}-{{/if}}</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">清洁舱单</div>
+			<div class="col-1 field-value">
+				{{#if @ifcsumFlag}}
+				<div class="y-tag" data-icon="checkmark"></div>
+				{{else}}
+				<div class="n-tag" data-icon="close"></div>
+				{{/if}}
+			</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">运抵报告</div>
+			<div class="col-1 field-value">
+				{{#if @matouFlag}}
+				<div class="y-tag" data-icon="checkmark"></div>
+				{{else}}
+				<div class="n-tag" data-icon="close">{{matouRemark}}</div>
+				{{/if}}
+			</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">海关放行</div>
+			<div class="col-1 field-value">
+				{{#if @customFlag}}
+				<div class="y-tag" data-icon="checkmark"></div>
+				{{else}}
+				<div class="n-tag" data-icon="close">{{customRemark}}</div>
+				{{/if}}
+			</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">三联单</div>
+			<div class="col-1 field-value">
+				{{#if @sldFlag}}
+				<div class="y-tag" data-icon="checkmark"></div>
+				{{else}}
+				<div class="n-tag" data-icon="close">{{sldRemark}}</div>
+				{{/if}}
+			</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">能否放行</div>
+			<div class="col-1 field-value">
+				{{#if @sendEnable}}
+				<p>可放行{{#if compareTime}}<br/>{{compareTime}}{{/if}}</p>
+				{{else}}
+				<p class="err1">不可放行{{#if compareTime}}<br/>{{compareTime}}{{/if}}</p>
+				{{/if}}
+			</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">EDI发送状态</div>
+			<div class="col-1 field-value">
+				{{#if @sendFlag}}
+				<p>已发送{{#if sendTime}}<br/>{{sendTime}}{{/if}}</p>
+				{{else}}
+				<p class="err1">未发送{{#if sendTime}}<br/>{{sendTime}}{{/if}}</p>
+				{{/if}}
+			</div>
+		</li>
+		<li class="grid field">
+			<div class="col-0 field-name">码头放行状态</div>
+			<div class="col-1 field-value">
+				{{>passFlag}}
+			</div>
+		</li>
+	</ul>
+{{/list}}
+</script>
